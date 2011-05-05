@@ -1,0 +1,31 @@
+html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font: 13px/18px Arial, Verdana, sans-serif;
+    background-color: #dfeaef;
+}
+
+div.whole-page {
+    min-width: 990px;
+    max-width: 1440px;
+    width: 92%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+div.god-block {
+    overflow: hidden;
+}
+
+div.topmenu {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    margin: 35px 15px 35px 15px;
+}
