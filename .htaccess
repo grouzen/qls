@@ -1,0 +1,20 @@
+####################################################################
+####################################################################
+##
+## Based on "QLS" framework <http://bitbucket.org/grouzen/qls>.
+## 2010 (c) Nedokushev Michael <grouzen.hexy@gmail.com>.
+##
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^aol\.net\.ua$
+RewriteRule ^(.*)$ http://cisonline.net.ua/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule (.*)$ index.php?route=$1 [L]
+RewriteRule ^$ index.php [L]
+
+
+

@@ -45,11 +45,14 @@ class Sessions implements Singleton {
         setcookie('support', 1, time() + Settings::getCookieExpire());
         
         if(isset($_COOKIE['support']) && (!isset($_COOKIE['remember']) || !isset($_SESSION['login']))) {
+            $query = array('controller' => null,
+                           'action' => null,
+                           'params' => null);
             if(isset($_GET['route'])) {
                 $query = Router::getInstance()->encodeRoute($_GET['route']);
                 $this->logout($query);
             } else {
-                $this->logout(null, null, null);
+                $this->logout($query);
             }
         }
         
